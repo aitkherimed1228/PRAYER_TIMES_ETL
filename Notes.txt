@@ -1,0 +1,31 @@
+### Prayer Times Data Engineering Project  
+
+1- Extract Data: Fetch prayer times from the Habous API for different cities and store raw JSON data.  
+
+2- Transform Data: Convert prayer times to a standardized format (24-hour), clean data, and add metadata (city, date).  
+
+3- Load Data: Store processed data in a PostgreSQL/MySQL database with tables for cities, prayer times, and users.  
+
+4- Automation (Airflow): Schedule a daily ETL pipeline to update prayer times automatically.  
+
+5- Real-Time Notifications:  
+    - Fetch upcoming prayer times from the database.  
+    - Send alerts 10 minutes before prayer via:  
+      { Telegram bot , 
+      Email notifications ,
+      Push notifications (Firebase) }
+    - Automate notifications using Airflow (runs every minute).  
+
+6- API & Dashboard:  
+   - FastAPI: Create an API to serve prayer times.  
+   - Streamlit: Build a web UI for users to select city/date and view prayer times.  
+
+Next Steps: Deploy the system, add a user subscription page, and enhance with more features! 
+
+###Notebook :
+
+Table 1 " cities " : ["city_id","arabic_name","french_name"] * 190 City
+Table 2 " prayer_times " : ["id" , "city_id" , "timings"] * 190  up-date every month
+Table 3 " prayer_times_details  " : ["Gregorian_date", "hijri_date" , "city" , "fajr" , "sunrise" , "dhuhr" , "asr" , "maghreb" , "ishaa"] * 5700 raws
+
+For the same "city_id" we should have 30 raws (30 days) of PrayerTime data = 30*190 = 5700 raws

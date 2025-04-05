@@ -1,0 +1,28 @@
+[2025-04-05T15:53:39.255+0000] {local_task_job_runner.py:123} INFO - ::group::Pre task execution logs
+[2025-04-05T15:53:39.290+0000] {taskinstance.py:2614} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: adhan_etl_weekly.fetch_and_insert_raw_prayer_times manual__2025-04-05T15:43:39.076603+00:00 [queued]>
+[2025-04-05T15:53:39.312+0000] {taskinstance.py:2614} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: adhan_etl_weekly.fetch_and_insert_raw_prayer_times manual__2025-04-05T15:43:39.076603+00:00 [queued]>
+[2025-04-05T15:53:39.314+0000] {taskinstance.py:2867} INFO - Starting attempt 1 of 2
+[2025-04-05T15:53:39.561+0000] {taskinstance.py:2890} INFO - Executing <Task(PythonOperator): fetch_and_insert_raw_prayer_times> on 2025-04-05 15:43:39.076603+00:00
+[2025-04-05T15:53:39.574+0000] {warnings.py:112} WARNING - /home/***/.local/lib/python3.12/site-packages/***/task/task_runner/standard_task_runner.py:70: DeprecationWarning: This process (pid=336) is multi-threaded, use of fork() may lead to deadlocks in the child.
+  pid = os.fork()
+
+[2025-04-05T15:53:39.577+0000] {standard_task_runner.py:72} INFO - Started process 340 to run task
+[2025-04-05T15:53:39.577+0000] {standard_task_runner.py:104} INFO - Running: ['***', 'tasks', 'run', 'adhan_etl_weekly', 'fetch_and_insert_raw_prayer_times', 'manual__2025-04-05T15:43:39.076603+00:00', '--job-id', '820', '--raw', '--subdir', 'DAGS_FOLDER/PrayerTimePipeline.py', '--cfg-path', '/tmp/tmp3xkemewa']
+[2025-04-05T15:53:39.580+0000] {standard_task_runner.py:105} INFO - Job 820: Subtask fetch_and_insert_raw_prayer_times
+[2025-04-05T15:53:39.664+0000] {task_command.py:467} INFO - Running <TaskInstance: adhan_etl_weekly.fetch_and_insert_raw_prayer_times manual__2025-04-05T15:43:39.076603+00:00 [running]> on host 83fc34a9e46f
+[2025-04-05T15:53:39.788+0000] {taskinstance.py:3134} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='***' AIRFLOW_CTX_DAG_ID='adhan_etl_weekly' AIRFLOW_CTX_TASK_ID='fetch_and_insert_raw_prayer_times' AIRFLOW_CTX_EXECUTION_DATE='2025-04-05T15:43:39.076603+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='manual__2025-04-05T15:43:39.076603+00:00'
+[2025-04-05T15:53:39.791+0000] {logging_mixin.py:190} INFO - Task instance is in running state
+[2025-04-05T15:53:39.792+0000] {logging_mixin.py:190} INFO -  Previous state of the Task instance: queued
+[2025-04-05T15:53:39.794+0000] {logging_mixin.py:190} INFO - Current task name:fetch_and_insert_raw_prayer_times state:running start_date:2025-04-05 15:53:39.291824+00:00
+[2025-04-05T15:53:39.796+0000] {logging_mixin.py:190} INFO - Dag name:adhan_etl_weekly and current dag run status:running
+[2025-04-05T15:53:39.797+0000] {taskinstance.py:732} INFO - ::endgroup::
+[2025-04-05T15:56:36.985+0000] {python.py:240} INFO - Done. Returned value was: None
+[2025-04-05T15:56:37.001+0000] {taskinstance.py:341} INFO - ::group::Post task execution logs
+[2025-04-05T15:56:37.003+0000] {taskinstance.py:353} INFO - Marking task as SUCCESS. dag_id=adhan_etl_weekly, task_id=fetch_and_insert_raw_prayer_times, run_id=manual__2025-04-05T15:43:39.076603+00:00, execution_date=20250405T154339, start_date=20250405T155339, end_date=20250405T155637
+[2025-04-05T15:56:37.041+0000] {logging_mixin.py:190} INFO - Task instance in success state
+[2025-04-05T15:56:37.043+0000] {logging_mixin.py:190} INFO -  Previous state of the Task instance: running
+[2025-04-05T15:56:37.044+0000] {logging_mixin.py:190} INFO - Dag name:adhan_etl_weekly queued_at:2025-04-05 15:43:39.092133+00:00
+[2025-04-05T15:56:37.045+0000] {logging_mixin.py:190} INFO - Task hostname:83fc34a9e46f operator:PythonOperator
+[2025-04-05T15:56:37.084+0000] {local_task_job_runner.py:266} INFO - Task exited with return code 0
+[2025-04-05T15:56:37.116+0000] {taskinstance.py:3901} INFO - 1 downstream tasks scheduled from follow-on schedule check
+[2025-04-05T15:56:37.121+0000] {local_task_job_runner.py:245} INFO - ::endgroup::
